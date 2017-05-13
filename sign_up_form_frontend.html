@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Form</title>
+	<style>
+		body {
+			font-family: Helvetica,Arial, Sans-serif;
+			background: #999999; /*#555555*/
+			line-height: 2em;
+		}
+
+		#container {
+			border:2px solid #555555;
+			width:45%;
+			margin:auto;
+			background: #777777;
+			padding-left: 3%;
+			box-shadow: 4px 4px 10px 1px black;
+			padding-bottom: 3%;
+			/*color:white;*/
+			color: #f5f5f5;
+		}
+
+		#btnSubmit {
+			background: #333333;
+			color:white;
+			height: 40px;
+			width:140px;
+			box-shadow: 0px 2px 5px 2px black;
+		}
+
+		#btnSubmit:hover {
+			box-shadow: 0px 3px 7px 3px black;
+			background: #222222;
+			font-weight: ;
+		}
+
+		input,#dropDown {
+			border-radius: 5px;
+			background: ;/*#999999*/
+			padding: 3px 3px;
+			margin-left: 5px;
+		}
+
+		input:hover, #dropDown:hover {
+			box-shadow: 2px 2px 3px 0px black;
+		}
+
+		#lname {
+			margin-left: 20px;
+		}
+
+		/*
+		#dropDown {
+			border-radius: 5px;
+			padding: 3px 0px;
+			margin-left: 5px;
+		}
+		*/
+	</style>
+</head>
+<body>
+	<div id="container">
+		<form name="form1" method="post" action="form_values_backend.php">
+			<h2>Sign Up Form</h2>
+			
+			First Name: <input type="text" name="txtFName"> <span id="lname">Last Name: </span><input type="text" name="txtLName">
+			<br>
+			Gender: <input type="radio" name="xGender" value="Male">Male</input>
+			<input type="radio" name="xGender" value="Female">Female</input>
+			<br>
+			Date of Birth: <input type="date" name="DOB">
+			<br>
+			Email: <input type="email" name="emailID">
+			<br>
+			Password: <input type="password" name="password">
+			<br>
+			Select City: 
+			<select name="selectedCity" id="dropDown">
+				<option>San Francisco</option>
+				<option>New York</option>
+				<option>London</option>
+				<option>Paris</option>
+				<option>Berlin</option>
+			</select>
+			<br>
+			Interests: <br>
+			<input type="checkbox" name="interest[]" value="Technology"> Technology</input><br>
+			<input type="checkbox" name="interest[]" value="Education"> Education</input><br>
+			<input type="checkbox" name="interest[]" value="Business"> Business</input><br>
+			<input type="checkbox" name="interest[]" value="Fashion"> Fashion</input><br>
+			<input type="checkbox" name="interest[]" value="Health"> Health</input><br>
+			<input type="checkbox" name="interest[]" value="Current Affairs"> Current Affairs</input>
+
+			<br><br>
+			<input type="submit" value="Submit" id=btnSubmit>
+		</form>
+	</div>
+</body>
+</html>
